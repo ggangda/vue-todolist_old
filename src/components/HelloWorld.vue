@@ -4,9 +4,9 @@
 <div class="md-layout-item">
         <md-field>
           <md-select v-model="country" name="country" id="country" placeholder="중요도">
-            <md-option value="1">high</md-option>
-            <md-option value="2">normal</md-option>
-            <md-option value="3">low</md-option>
+            <md-option value="1">높음</md-option>
+            <md-option value="2">보통</md-option>
+            <md-option value="3">낮음</md-option>
           </md-select>
         </md-field>
       </div>
