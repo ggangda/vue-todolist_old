@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+import Clock from '@/components/Clock'
 import { MdButton, MdContent, MdTabs, MdField, MdCheckbox, MdList, MdMenu, MdSubheader } from 'vue-material/dist/components/'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
@@ -21,6 +22,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
+    },
+    {
+      path: '/',
+      name: 'Clock',
+      component: Clock
     }
   ]
 })

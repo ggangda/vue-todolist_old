@@ -1,6 +1,5 @@
 <template>
-  <div class="full-control">
-    <span id="clock" class="md-display-4">시계 {{ time }}</span>
+<div class="full-control">
     <div class="md-layout md-gutter">
       <div class="md-layout-item md-size-15">
         <md-field>
@@ -44,7 +43,7 @@
         </md-list-item>
       </md-list>
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -53,8 +52,7 @@ export default {
   data: () => ({
     notification: ['sound', 'vibrate'],
     priority: null,
-    type: null,
-    time : ''
+    type: null
   })
 }
 </script>
