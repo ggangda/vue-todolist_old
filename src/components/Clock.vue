@@ -4,28 +4,19 @@
 </div>
 </template>
 <script>
-
-export default {
-    name : 'Clock',
-    data() {
-        return{
-            time : null
-        }
-    },
-    methods: {
-        setTimeData(){
-            var cd = new Date();
-            var cdtime = cd.toLocaleTimeString('en-GB');
-            this.time = cdtime;
-        }
-    },
-    created(){
-        setInterval(() => {
-            this.setTimeData()
-        }, 1000);        
-    }
-}
-
+	export default {
+	    name : 'Clock',
+	    data() {
+	        return{
+	            time :  this.$moment(new Date()).format('HH:mm:ss')
+	        }
+	    },
+	    created(){
+	        setInterval(() => {
+                this.time = this.$moment(new Date()).format('HH:mm:ss')
+	        }, 1000);        
+	    }
+	}
 </script>
 <style lang="scss" scoped>
   .clock-control{

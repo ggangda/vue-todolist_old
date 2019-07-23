@@ -5,6 +5,8 @@ import Clock from '@/components/Clock'
 import { MdButton, MdContent, MdTabs, MdField, MdCheckbox, MdList, MdMenu, MdSubheader } from 'vue-material/dist/components/'
 import 'vue-material/dist/vue-material.min.css'
 import 'vue-material/dist/theme/default.css'
+import moment from 'moment'
+import VueMomentJS from 'vue-momentjs'
 
 Vue.use(Router)
 Vue.use(MdButton)
@@ -15,6 +17,7 @@ Vue.use(MdCheckbox)
 Vue.use(MdList)
 Vue.use(MdMenu)
 Vue.use(MdSubheader)
+Vue.use(VueMomentJS, moment)
 
 export default new Router({
   routes: [
@@ -22,11 +25,6 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    },
-    {
-      path: '/',
-      name: 'Clock',
-      component: Clock
     }
   ]
 })
