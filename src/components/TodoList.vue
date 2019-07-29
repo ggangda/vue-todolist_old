@@ -17,43 +17,40 @@
         </md-field>
       </div>
       <div class="md-layout-item md-size-10">
-        <md-button class="md-icon-button">
+        <md-button class="md-icon-button" v-on:click="add">
           <md-icon>add</md-icon>
         </md-button>
       </div>
     </div>
     <div>
-      <md-list>
-        <md-subheader>Notifications</md-subheader>
-        <md-list-item>
-          <md-checkbox v-model="notification" value="preview" />
-          <span class="md-list-item-text">Show content preview</span>
-        </md-list-item>
-        <md-list-item>
-          <md-checkbox v-model="notification" value="sound" />
-          <span class="md-list-item-text">Sound</span>
-        </md-list-item>
-        <md-list-item>
-          <md-checkbox v-model="notification" value="vibrate" />
-          <span class="md-list-item-text">Vibrate</span>
-        </md-list-item>
-        <md-list-item>
-          <md-checkbox v-model="notification" value="light" />
-          <span class="md-list-item-text">Notification light</span>
-        </md-list-item>
-      </md-list>
+    
+    <TodoItems v-for="item in items" :key="item.id" :item="item"/>
     </div>
 </div>
 </template>
 
 <script>
+import TodoItems from './TodoItems';
+
 export default {
-  name: 'Controls',
+  name: 'TodoList',
+  components : {
+    TodoItems
+  },
   data: () => ({
-    notification: ['sound', 'vibrate'],
     priority: null,
-    type: null
-  })
+    type: null,
+    items : [
+      {
+        'todoText': 'test'
+      }
+    ]  
+  }),
+  methods:{
+    add : function(){
+      this.items.push({'todoText':'12312312323123123'});
+    }
+  }
 }
 </script>
 
