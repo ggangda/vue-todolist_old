@@ -1,5 +1,5 @@
 <template>
-<div class="full-control">
+<div id="list" class="full-control">
     <div class="md-layout md-gutter">
       <div class="md-layout-item md-size-15">
         <md-field>
@@ -23,8 +23,10 @@
       </div>
     </div>
     <div>
-    
-    <TodoItems v-for="item in items" :key="item.id" :item="item"/>
+    <md-list id="itemlist">
+      <md-subheader>To-do-list</md-subheader>
+      <TodoItems v-for="item in items" :key="item.id" :item="item"/>
+    </md-list>
     </div>
 </div>
 </template>
@@ -42,9 +44,10 @@ export default {
     type: null,
     items : [
       {
-        'todoText': 'test'
+        'todoText': null
       }
-    ]  
+    ],
+    listItem:null
   }),
   methods:{
     add : function(){

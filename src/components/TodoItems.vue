@@ -1,11 +1,9 @@
 <template>
-<md-list id="itemlist">
-  <md-subheader>To-do-list</md-subheader>
+
   <md-list-item>
     <md-checkbox v-model="listItem"/>
     <span class="md-list-item-text">{{ todoText }}</span>
   </md-list-item>
-</md-list>
 </template>
 
 <script>
@@ -20,7 +18,7 @@ export default {
   data(){
     return{
       todoText : this.item.todoText,
-      listItem: ''          //['dd','dd']
+      listItem: null//['dd','dd']
     }
   }
 }

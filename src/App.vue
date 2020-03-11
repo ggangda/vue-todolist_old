@@ -1,18 +1,20 @@
 <template>
   <div id="app">
     <Clock/>
-    <router-view/>
+    <TodoList/>
   </div>
 </template>
 
 <script>
 import Clock from './components/Clock';
+import TodoList from './components/TodoList';
 import TodoItems from './components/TodoItems';
 
 export default {
   name: 'App',
   components:{
     Clock,
+    TodoList,
     TodoItems
   }
 }
