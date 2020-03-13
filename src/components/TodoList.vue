@@ -51,7 +51,8 @@ export default {
   }),
   methods:{
     add : function(){
-      this.items.push({'todoText':'12312312323123123'});
+      this.items.push({'todoText': this.type});
+      this.type = null;
     }
   }
 }

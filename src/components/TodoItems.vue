@@ -1,7 +1,7 @@
 <template>
 
   <md-list-item>
-    <md-checkbox v-model="listItem"/>
+    <md-checkbox v-model="listItem" />
     <span class="md-list-item-text">{{ todoText }}</span>
   </md-list-item>
 </template>
@@ -17,7 +17,7 @@ export default {
   },
   data(){
     return{
-      todoText : this.item.todoText,
+      todoText : "할일",
       listItem: null//['dd','dd']
     }
   }
